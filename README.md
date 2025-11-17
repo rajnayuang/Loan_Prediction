@@ -31,9 +31,9 @@ To reproduce the results:
 
 ## Project Structure
 
-├── loan-status-prediction-decisiontreeclassifier.ipynb
-├── README.md
-└── loan-data.csv
+-├── loan-status-prediction-decisiontreeclassifier.ipynb
+-├── README.md
+-└── loan-data.csv
 
 
 ## Results
