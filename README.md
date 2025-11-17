@@ -1,47 +1,58 @@
-# Loan Status Prediction Using DecisionTreeClassifier
+# Loan Status Prediction
 
-This project uses a Decision Tree Classifier to predict loan status based on provided borrower and loan features. The workflow involves data preprocessing, exploratory analysis, model training, evaluation, and results interpretation.
+This repository contains a small machine learning project that predicts loan approval status from borrower and loan features. The primary work is in a Jupyter notebook which walks through data loading, preprocessing, exploratory data analysis, model training (Decision Tree), evaluation, and interpretation.
 
+## Quick summary
+- Model: DecisionTreeClassifier (scikit-learn)
+- Notebook: `model.ipynb` — full analysis and code cells
+- Data: `loan_data.csv` — the dataset used for training/evaluation
+- Environment: `requirements.txt` — Python dependencies
 
-## Project Overview
+## Files in this repository
 
-The goal of this notebook is to develop a machine learning model that can accurately classify loan applications as approved or not approved, based on features such as applicant income, education, property area, loan amount, and credit history. The classifier used is `DecisionTreeClassifier` from `scikit-learn`.
+- `model.ipynb` — Jupyter notebook with the full analysis and modeling pipeline.
+- `loan_data.csv` — raw dataset used by the notebook (target column: `Loan_Status`).
+- `requirements.txt` — pip installable dependencies required to run the notebook.
+- `README.md` — this file.
 
-## Dataset
+## Setup
 
-- **Source:** [Kaggle Loan Status Prediction](https://www.kaggle.com/datasets)
-- The dataset contains features like `Gender`, `Married`, `Dependents`, `Education`, `Self_Employed`, `AppicantIncome`, `CoapplicantIncome`, `LoanAmount`, `Loan_Amount_Term`, `Credit_History`, and `Property_Area`.
-- The target variable is `Loan_Status` (Y/N).
+1. Create (optional) and activate a virtual environment.
 
-## Installation & Requirements
+	Example (PowerShell):
 
-Before running the notebook, ensure you have the following dependencies installed:
+	```powershell
+	python -m venv .venv; .\.venv\Scripts\Activate.ps1
+	```
 
+2. Install dependencies:
+
+	```powershell
+	pip install -r requirements.txt
+	```
+
+3. Start Jupyter (if not using VS Code):
+
+	```powershell
+	jupyter notebook model.ipynb
+	```
+
+Or open `model.ipynb` directly in VS Code's Notebook editor.
 
 ## Usage
 
-To reproduce the results:
+1. Ensure `loan_data.csv` is in the same folder as `model.ipynb`.
+2. Open and run the notebook cells in order. The notebook includes steps for data cleaning, feature encoding, training the Decision Tree, and evaluating metrics (accuracy, confusion matrix, feature importance).
 
-1. Clone the repository or download the notebook.
-2. Place the data file (e.g., `loan-data.csv`) in the working directory.
-3. Run the notebook:
+## Dataset notes
 
-
-4. Follow the notebook for preprocessing, training, and evaluation steps.
-
-## Project Structure
-
--├── loan-status-prediction-decisiontreeclassifier.ipynb
--├── README.md
--└── loan-data.csv
-
+- The dataset contains common loan-application fields such as `Gender`, `Married`, `Dependents`, `Education`, `Self_Employed`, `ApplicantIncome`, `CoapplicantIncome`, `LoanAmount`, `Loan_Amount_Term`, `Credit_History`, `Property_Area`, and the target `Loan_Status`.
+- If this dataset was sourced externally (e.g., Kaggle), please keep any original attributions or licensing information in the repository when redistributing.
 
 ## Results
 
-- Decision tree classifier is trained and evaluated on the processed dataset.
-- Performance metrics such as accuracy, confusion matrix, and visualization of results are presented.
-- Insights regarding important features and model limitations are discussed in the notebook.
+Find model performance metrics and visualizations inside `model.ipynb`. The notebook shows accuracy, a confusion matrix, and a short discussion of model limitations (overfitting, data imbalance, etc.).
 
 ## Contributing
 
-Feel free to fork the project, open issues, or submit pull requests if you have suggestions, improvements, or bug fixes.
+Small improvements are welcome: add a LICENSE, include a `data/` folder, expand tests, or provide a requirements lock file. Open an issue or submit a PR.
